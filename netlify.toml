@@ -1,0 +1,124 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# 301 www to apex host and force https
+[[redirects]]
+  from = "https://www.pwebdigitals.com/*"
+  to = "https://pwebdigitals.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.pwebdigitals.com/*"
+  to = "https://pwebdigitals.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://pwebdigitals.com/*"
+  to = "https://pwebdigitals.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/showcase"
+  to = "/work"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/digital-experience"
+  to = "/web-design"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/web-design"
+  to = "/web-design"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/seo"
+  to = "/seo"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/ai-automation"
+  to = "/ai-automation"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/lead-generation"
+  to = "/lead-generation"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/growth-systems"
+  to = "/lead-generation"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/crm-automation"
+  to = "/crm-automation"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/customer-systems"
+  to = "/crm-automation"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/product-engineering"
+  to = "/mvp-development"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/custom-solutions"
+  to = "/mvp-development"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/mvp-development"
+  to = "/mvp-development"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/ai-video"
+  to = "/ai-video"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/media"
+  to = "/ai-video"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/media-production"
+  to = "/ai-video"
+  status = 301
+
+[[redirects]]
+  from = "/media"
+  to = "/ai-video"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities/*"
+  to = "/services"
+  status = 301
+
+
+[[redirects]]
+  from = "/work/multi-cam-broadcast-rig"
+  to = "/work"
+  status = 301
